@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0">
+ <title>達鐿公司介紹</title>
+<!-- Bootstrap css 的cdn ，放HTML 的 head中-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+<!-- bootstrap圖標來源 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<!-- 內建css檔案 -->
+<link rel="stylesheet" href="styles.css">
+</head>
+
+
+
+<body>  
+<!-- 頂部介面 -->
+ <div class="container-fluid p-0 sticky-header bg-white shadow-sm">
+  <div class="container py-2">
+    <div class="row align-items-center gx-2">
+      <!-- Logo 與標題（加上回首頁連結） -->
+      <div class="col d-flex align-items-center flex-wrap">
+        <img src="images/圖片_20250723141936_9.png" alt="Logo" height="40" />
+        <a href="Index.html" class="text-decoration-none ms-2">
+          <h1 class="h5 mb-0 text-dark" id="site-title">達鐿（越南）領航增材科技技術中心</h1>
+        </a>
+      </div>
+
+      <!-- 桌機版按鈕 -->
+      <div class="col-auto d-none d-md-flex gap-2 align-items-center">
+        <a href="AboutUs.html" class="btn btn-outline-secondary nav-btn" data-key="about">About Us</a>
+        <a href="Contact.html" class="btn btn-outline-secondary nav-btn" data-key="contact">Contact</a>
+       <div class="dropdown d-none d-md-block"> <!-- 桌機版語言選單 -->
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="lang-btn-desktop" data-bs-toggle="dropdown" aria-expanded="false">
+    🌐 Language
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item lang-option" href="#" data-lang="zh">🇹🇼 中文</a></li>
+    <li><a class="dropdown-item lang-option" href="#" data-lang="en">🇺🇸 English</a></li>
+    <li><a class="dropdown-item lang-option" href="#" data-lang="vi">🇻🇳 Tiếng Việt</a></li>
+  </ul>
+</div>
+      </div>
+
+      <!-- 手機版選單 -->
+      <div class="col-auto d-md-none">
+  <div class="dropdown">
+    <button class="btn btn-secondary" type="button" id="mobileMenuBtn" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-list"></i>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="mobileMenuBtn">
+      <li><a class="dropdown-item nav-btn" href="AboutUs.html" data-key="about">關於我們</a></li>
+      <li><a class="dropdown-item nav-btn" href="Contact.html" data-key="contact">聯絡方式</a></li>
+      <li><hr class="dropdown-divider"></li>
+
+      <!-- ✅ 正確的手機語言選單，作為下拉子選單 -->
+      <!-- ✅ 手機版語言選單：無子選單，直接列出語言 -->
+<li><a class="dropdown-item lang-option" href="#" data-lang="zh">🇹🇼 中文</a></li>
+<li><a class="dropdown-item lang-option" href="#" data-lang="en">🇺🇸 English</a></li>
+<li><a class="dropdown-item lang-option" href="#" data-lang="vi">🇻🇳 Tiếng Việt</a></li>
+
+    </ul>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <!-- Hero Banner -->
+  <div class="bg-cover d-flex align-items-center justify-content-center text-center text-white">
+    <div class="overlay-content">
+      <h1 class="display-5 fw-bold" id="hero-title">達鐿（越南）領航增材科技技術中心</h1>
+      <p class="lead" id="hero-sub">3D列印 × 數位製造 × 一體化解決方案</p>
+    </div>
+  </div>
+
+
+
+
+<hr />
+    
+<!-- 應用類別 -->
+
+<section class="my-5 py-4" style="background-color: #f1f3f6;">
+  
+
+  <div class="container">
+    <h2 id="applications" class="text-center mb-4" >應用分類</h2>
+
+    <!-- 第一排：4 張 -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 mb-4">
+      <div class="col">
+        <div class="card h-100 shadow-sm border-0">
+          <a href="pages/sculpture.html" class="text-decoration-none text-dark">
+            <img src="images/hand.jpg" class="card-img-top" alt="雕塑應用" style="height: 200px; object-fit: cover;">
+            <div class="card-body text-center">
+             <h5 class="card-title" id="card1-title">雕塑應用</h5>
+<p class="card-text text-muted small" id="card1-desc">高品質藝術雕塑 & 快速打樣。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm border-0">
+          <a href="pages/vacuum.html" class="text-decoration-none text-dark">
+            <img src="images/vacuum.jpg" class="card-img-top" alt="復模技術" style="height: 200px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h5 class="card-title" id="card2-title">復模技術</h5>
+<p class="card-text text-muted small" id="card2-desc">精準複製模型，支援小批量。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm border-0">
+          <a href="pages/automobile.html" class="text-decoration-none text-dark">
+            <img src="images/car.JPG" class="card-img-top" alt="汽車應用" style="height: 200px; object-fit: cover;">
+            <div class="card-body text-center">
+             <h5 class="card-title" id="card3-title">汽車應用</h5>
+<p class="card-text text-muted small" id="card3-desc">快速製樣與零件開發支援。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm border-0">
+          <a href="pages/3dmetal.html" class="text-decoration-none text-dark">
+            <img src="images/metal.jpg" class="card-img-top" alt="金屬應用" style="height: 200px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h5 class="card-title" id="card4-title">金屬3D應用</h5>
+<p class="card-text text-muted small" id="card4-desc">精密外殼與功能件打樣。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 第二排：3 張 -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100 shadow-sm border-0">
+          <a href="pages/medical.html" class="text-decoration-none text-dark">
+            <img src="images/head.JPG" class="card-img-top" alt="醫療應用" style="height: 200px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h5 class="card-title" id="card5-title">醫療應用</h5>
+<p class="card-text text-muted small" id="card5-desc">專業醫療模型與器械開發。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm border-0">
+          <a href="pages/appliance.html"class="text-decoration-none text-dark">
+            <img src="images/furniture.jpg" class="card-img-top" alt="家電應用" style="height: 200px; object-fit: cover;">
+            <div class="card-body text-center">
+             <h5 class="card-title" id="card6-title">家電應用</h5>
+<p class="card-text text-muted small" id="card6-desc">快速打樣與產品驗證支援。</p>
+
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm border-0">
+          <a href="pages/figure.html" class="text-decoration-none text-dark">
+            <img src="images/buildings.PNG" class="card-img-top" alt="藝術設計" style="height: 200px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h5 class="card-title" id="card7-title">手辦應用</h5>
+<p class="card-text text-muted small" id="card7-desc">創意模型與展示件製作。</p>
+
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--底頁聯絡資訊 -->
+ <footer class="bg-light py-4 mt-5 text-center">
+<small id="footer-text">© 2025 達鐿（越南）領航增材科技中心</small>  </footer>
+ <!-- 聯絡按鈕  -->
+<div id="floating-contact">
+  <a href="https://zalo.me/0349636506" target="_blank" class="contact-btn zalo">Zalo</a>
+  <a href="https://www.facebook.com/share/1Yuw8wHqYC/?mibextid=wwXIfr" target="_blank" class="contact-btn fb">Facebook</a>
+</div>
+
+<script>
+  const texts = {
+    zh: {
+      about: '關於我們',
+      contact: '聯絡方式',
+      language: '語言切換',
+      siteTitle: '達鐿（越南）領航增材科技技術中心',
+      heroTitle: '達鐿（越南）領航增材科技技術中心',
+      heroSub: '3D列印 × 數位製造 × 一體化解決方案',
+      menu: '選單',
+      app: '應用分類',
+      card1Title: '雕塑應用',
+      card1Desc: '高品質藝術雕塑 & 快速打樣。',
+      card2Title: '復模技術',
+      card2Desc: '精準複製模型，支援小批量。',
+      card3Title: '汽車應用',
+      card3Desc: '快速製樣與零件開發支援。',
+      card4Title: '金屬3D應用',
+      card4Desc: '精密外殼與功能件打樣。',
+      card5Title: '醫療應用',
+      card5Desc: '專業醫療模型與器械開發。',
+      card6Title: '家電應用',
+      card6Desc: '快速打樣與產品驗證支援。',
+      card7Title: '手辦應用',
+      card7Desc: '創意模型與展示件製作。',
+      footer: '© 2025 達鐿（越南）領航增材科技技術中心',
+    },
+    en: {
+      about: 'About Us',
+      contact: 'Contact',
+      language: 'Language',
+      siteTitle: 'TAYI (VIETNAM) 3D PRINTING TECHNICAL CENTER',
+      heroTitle: 'TAYI (VIETNAM) 3D PRINTING TECHNICAL CENTER',
+      heroSub: '3D Printing × Digital Manufacturing × Integrated Solutions',
+      menu: 'Menu',
+      app: 'Applications',
+      card1Title: 'Sculpture Applications',
+      card1Desc: 'High-quality art sculptures & rapid prototyping.',
+      card2Title: 'Vacuum Casting',
+      card2Desc: 'Precise duplication for small batch production.',
+      card3Title: 'Automotive Applications',
+      card3Desc: 'Rapid prototyping and parts development.',
+      card4Title: 'Metal 3D Printing',
+      card4Desc: 'Precision housings and functional prototypes.',
+      card5Title: 'Medical Applications',
+      card5Desc: 'Professional models and instrument development.',
+      card6Title: 'Home Appliance Applications',
+      card6Desc: 'Rapid prototyping & product testing support.',
+      card7Title: 'Figure Applications',
+      card7Desc: 'Creative models and display pieces.',
+      footer: '© TAYI (VIETNAM) 3D PRINTING TECHNICAL CENTER',
+    },
+    vi: {
+      about: 'Giới thiệu',
+      contact: 'Liên hệ',
+      language: 'Ngôn ngữ',
+      siteTitle: 'TAYI (VIETNAM) 3D PRINTING TECHNICAL CENTER',
+      heroTitle: 'TAYI (VIETNAM) 3D PRINTING TECHNICAL CENTER',
+      heroSub: 'In 3D × Sản xuất kỹ thuật số × Giải pháp tích hợp',
+      menu: 'Menu',
+      app: 'Lĩnh vực ứng dụng',
+      card1Title: 'Ứng dụng điêu khắc',
+      card1Desc: 'Tác phẩm nghệ thuật chất lượng cao & tạo mẫu nhanh.',
+      card2Title: 'Công nghệ đúc chân không',
+      card2Desc: 'Sao chép chính xác, hỗ trợ sản xuất nhỏ lẻ.',
+      card3Title: 'Ứng dụng ô tô',
+      card3Desc: 'Hỗ trợ tạo mẫu và phát triển linh kiện nhanh chóng.',
+      card4Title: 'In 3D kim loại',
+      card4Desc: 'Vỏ ngoài chính xác và các chi tiết chức năng.',
+      card5Title: 'Ứng dụng y tế',
+      card5Desc: 'Phát triển mô hình và thiết bị y tế chuyên nghiệp.',
+      card6Title: 'Ứng dụng thiết bị gia dụng',
+      card6Desc: 'Tạo mẫu nhanh và kiểm nghiệm sản phẩm.',
+      card7Title: 'Thiết kế figure',
+      card7Desc: 'Mô hình sáng tạo và vật trưng bày.',
+      footer: '© TAYI (VIETNAM) 3D PRINTING TECHNICAL CENTER',
+    }
+  };
+  
+function applyLang(l) {
+  document.getElementById('site-title').innerText = texts[l].siteTitle;
+  document.getElementById('hero-title').innerText = texts[l].heroTitle;
+  document.getElementById('hero-sub').innerText = texts[l].heroSub;
+  document.getElementById('applications').innerText = texts[l].app;
+
+  document.querySelectorAll('.nav-btn').forEach(btn => {
+    const key = btn.dataset.key;
+    btn.innerText = texts[l][key];
+  });
+
+  document.getElementById('lang-btn-desktop').innerText = texts[l].language;
+  
+  for (let i = 1; i <= 7; i++) {
+    const titleEl = document.getElementById(`card${i}-title`);
+    const descEl = document.getElementById(`card${i}-desc`);
+    if (titleEl) titleEl.innerText = texts[l][`card${i}Title`];
+    if (descEl) descEl.innerText = texts[l][`card${i}Desc`];
+  }
+
+  document.getElementById('footer-text').innerText = texts[l].footer;
+}
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const lang = localStorage.getItem('lang') || 'zh';
+    applyLang(lang);
+    
+  });
+
+  document.querySelectorAll('.lang-option').forEach(option => {
+  option.addEventListener('click', (e) => {
+    e.preventDefault();
+    const lang = option.dataset.lang;
+    localStorage.setItem('lang', lang);
+    applyLang(lang);
+  });
+});
+
+</script>
+</body></html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-key="med-page-title">醫療應用 - 達鐿（越南）增材科技技術中心</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+<!-- 頂部導覽區塊 -->
+<div id="include-header"></div>
+
+<!-- Hero Banner -->
+<div class="position-relative bg-cover text-white d-flex align-items-center justify-content-center text-center" style="height: 300px; background-image: url('../../images/main.jpg'); background-size: cover; background-position: center;">
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5);"></div>
+  <div class="position-relative">
+    <h1 class="display-5 fw-bold" id="hero-title" data-key="med-page-title">醫療應用</h1>
+    <p class="lead" id="hero-sub" data-key="med-page-subtitle">個性化醫材 × 模型導板 × 精準製造</p>
+  </div>
+</div>
+<hr />
+<!-- Main Content -->
+<!-- Main Content -->
+<main class="container my-5 application-section">
+  <div class="row align-items-center gy-5 gx-md-5">
+
+    <!-- 左側：圖片輪播 -->
+    <div class="col-lg-6 order-md-1">
+      <div id="medicalCarousel" class="carousel slide shadow-lg rounded" data-bs-ride="carousel">
+        <div class="carousel-inner rounded">
+          <div class="carousel-item active">
+            <img src="../../images/teeth.jpg" class="d-block w-100 img-fluid rounded" alt="應用案例1" style="max-height: 450px; object-fit: cover;" />
+          </div>
+          <div class="carousel-item">
+            <img src="../../images/head.JPG" class="d-block w-100 img-fluid rounded" alt="應用案例2" style="max-height: 450px; object-fit: cover;" />
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#medicalCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+          <span class="visually-hidden">上一張</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#medicalCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+          <span class="visually-hidden">下一張</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 右側：說明 -->
+    <div class="col-lg-6 order-md-2">
+      <section>
+        <h2 class="mb-4 border-start border-4 ps-3" data-key="med-overview-title">應用概述</h2>
+        <div class="bg-light p-4 rounded shadow-sm">
+          <ul class="fs-5">
+            <li data-key="med.point1.title">快速製造模具原型</li>
+            <ul>
+              <li data-key="med.point1.item1">降低成本與時間：3D打印技術可快速成型，免去傳統鋼模與石膏模具的繁瑣製程</li>
+              <li data-key="med.point1.item2">一次成型：減少製作步驟，提高效率</li>
+            </ul>
+            <li data-key="med.point2.title">醫療設備設計創新</li>
+            <ul>
+              <li data-key="med.point2.item1">突破傳統製造極限：可製作複雜結構以滿足臨床需求</li>
+              <li data-key="med.point2.item2">滿足個性化需求：支援精細化、定制化的設備設計</li>
+            </ul>
+            <li data-key="med.point3.title">輔助醫材與器械製造</li>
+            <ul>
+              <li data-key="med.point3.item1">高精度術前模型、手術導板</li>
+              <li data-key="med.point3.item2">小批量、多品類製造：加速臨床應用轉化</li>
+              <li data-key="med.point3.item3">縮短交付周期：提升治療效率</li>
+            </ul>
+          </ul>
+          <p class="mt-4 text-muted" data-key="med-overview-summary">
+            3D列印為醫療產業帶來更快速、精準、個性化的解決方案，推動未來醫療創新與照護發展！
+          </p>
+        </div>
+      </section>
+    </div>
+
+  </div>
+</main>
+
+
+
+<!-- Footer -->
+<footer class="bg-light py-4 mt-5 text-center">
+  <small data-key="footer">© 2025 達鐿（越南）領航增材科技中心</small>
+</footer>
+
+<!-- 浮動聯絡區塊 -->
+<div id="include-contact"></div>
+
+<!-- Scripts -->
+<script src="../../js/lan.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" defer></script>
+
+</body>
+</html>

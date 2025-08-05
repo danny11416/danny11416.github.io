@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>家電應用 - 達鐿（越南）增材科技技術中心</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  
+</head>
+<body>
+
+<!-- ✅ 引入共用 Header -->
+<div id="include-header"></div>
+
+<!-- ✅ Hero Banner（含遮罩） -->
+<div class="position-relative bg-cover text-white d-flex align-items-center justify-content-center text-center" style="height: 300px; background-image: url('../../images/main.jpg'); background-size: cover; background-position: center;">
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5);"></div>
+  <div class="position-relative">
+    <h1 class="display-5 fw-bold" id="hero-title" data-key="appliance-page-title">家電應用</h1>
+    <p class="lead" id="hero-sub" data-key="appliance-hero-sub">提升效率 × 靈活設計 × 快速量產</p>
+  </div>
+</div>
+<hr />
+<!-- ✅ 主內容區 -->
+<main class="container my-5 application-section">
+  <div class="row align-items-center gy-5 gx-md-5">
+
+    <!-- 左側：單張圖片輪播 -->
+    <div class="col-lg-6 order-md-1">
+      <div id="figureCarousel" class="carousel slide shadow-lg rounded" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- 第1張 -->
+          <div class="carousel-item active text-center">
+            <img src="../../images/appliance1.jpg" class="img-fluid rounded" alt="應用示例1" />
+          </div>
+
+          <!-- 第2張 -->
+          <div class="carousel-item text-center">
+            <img src="../../images/appliance2.jpg" class="img-fluid rounded" alt="應用示例2" />
+          </div>
+
+          <!-- 第3張 -->
+          <div class="carousel-item text-center">
+            <img src="../../images/appliance3.jpg" class="img-fluid rounded" alt="應用示例3" />
+          </div>
+
+          <!-- 第4張 -->
+          <div class="carousel-item text-center">
+            <img src="../../images/appliance4.jpg" class="img-fluid rounded" alt="應用示例4" />
+          </div>
+
+        </div>
+
+        <!-- 輪播控制按鈕 -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#figureCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#figureCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 右側：說明 -->
+    <div class="col-lg-6 order-md-2">
+      <section>
+        <h2 class="mb-4 border-start border-4 ps-3" data-key="appliance-overview-title">應用概述</h2>
+        <div class="bg-light p-4 rounded shadow-sm">
+          <ul class="fs-5">
+            <li data-key="appliance.design">設計與驗證</li>
+            <ul>
+              <li data-key="appliance.item1">概念設計與展示：幫助團隊高效協作、縮短產品開發週期、降低設計缺陷</li>
+              <li data-key="appliance.item2">裝配與功能測試：驗證產品性能，降低生產成本，提高市場競爭力</li>
+              <li data-key="appliance.item3">模具原型製作：低成本打造多款原型，加速研發進程</li>
+            </ul>
+            <li data-key="appliance.market">市場應用</li>
+            <ul>
+              <li data-key="appliance.item4">快速試製與小批量生產：減少開模成本，靈活應對市場需求</li>
+              <li data-key="appliance.item5">應用於多種家電產品：如空調、冰箱、洗衣機、音響、小家電等</li>
+              <li data-key="appliance.item6">提升生產效率，加速新品上市，提高市場佔有率</li>
+            </ul>
+          </ul>
+          <p class="mt-4 text-muted" data-key="appliance.summary">
+            3D列印技術正在重塑家電製造領域，為設計者與企業帶來更高效、更靈活的解決方案！
+          </p>
+        </div>
+      </section>
+    </div>
+
+  </div>
+</main>
+
+
+<!-- ✅ Footer -->
+<footer class="bg-light py-4 mt-5 text-center">
+  <small data-key="footer">© 2025 達鐿（越南）領航增材科技中心</small>
+</footer>
+
+<!-- ✅ 浮動聯絡區 -->
+<div id="include-contact"></div>
+
+<!-- ✅ JS 載入 -->
+<script src="../../js/lan.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>

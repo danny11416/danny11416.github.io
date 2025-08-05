@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <style>
+  /* 響應式標題字級 */
+  #site-title {
+    font-size:1rem;
+    white-space: normal;
+    overflow-wrap: break-word;  
+  }
+  @media (min-width: 1000px) {
+    #site-title {
+      font-size: 1.75rem;
+    }
+  }
+
+  /* 修正頂部列項目最小寬度，避免內容溢出 */
+  .sticky-header .row > .col,
+  .sticky-header .row > .col-auto {
+    min-width: 0;
+  }
+</style>
+  <style>
+    
+  
+    .sticky-header {
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .hero-banner {
+      background-image: url('../images/main.jpg'); /* 更換為該分類代表圖 */
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    }
+    .hero-banner h1 {
+      font-size: 2.5rem;
+    }
+    .application-section img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid p-0 sticky-header bg-white shadow-sm">
+  <div class="container py-2">
+    <div class="row align-items-center gx-2">
+      <!-- Logo 與標題（加上回首頁連結） -->
+      <div class="col d-flex align-items-center flex-wrap">
+        <img src="../../images/圖片_20250723141936_9.png" alt="Logo" height="40" />
+        <a href="../../index.html" class="text-decoration-none ms-2">
+          <h1 class="h5 mb-0 text-dark" id="site-title">達鐿（越南）領航增材科技技術中心</h1>
+        </a>
+      </div>
+
+      <!-- 桌機版按鈕 -->
+      <div class="col-auto d-none d-md-flex gap-2 align-items-center">
+        <a href="../AboutUs.html" class="btn btn-outline-secondary nav-btn" data-key="about">About Us</a>
+        <a href="../Contact.html" class="btn btn-outline-secondary nav-btn" data-key="contact">Contact</a>
+       <div class="dropdown d-none d-md-block"> <!-- 桌機版語言選單 -->
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="lang-btn-desktop" data-bs-toggle="dropdown" aria-expanded="false">
+    🌐 Language
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item lang-option" href="#" data-lang="zh">🇹🇼 中文</a></li>
+    <li><a class="dropdown-item lang-option" href="#" data-lang="en">🇺🇸 English</a></li>
+    <li><a class="dropdown-item lang-option" href="#" data-lang="vi">🇻🇳 Tiếng Việt</a></li>
+  </ul>
+</div>
+      </div>
+
+      <!-- 手機版選單 -->
+      <div class="col-auto d-md-none">
+  <div class="dropdown">
+    <button class="btn btn-secondary" type="button" id="mobileMenuBtn" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-list"></i>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="mobileMenuBtn">
+      <li><a class="dropdown-item nav-btn" href="AboutUs.html" data-key="about">關於我們</a></li>
+      <li><a class="dropdown-item nav-btn" href="Contact.html" data-key="contact">聯絡方式</a></li>
+      <li><hr class="dropdown-divider"></li>
+
+      <!-- ✅ 正確的手機語言選單，作為下拉子選單 -->
+      <!-- ✅ 手機版語言選單：無子選單，直接列出語言 -->
+<li><a class="dropdown-item lang-option" href="#" data-lang="zh">🇹🇼 中文</a></li>
+<li><a class="dropdown-item lang-option" href="#" data-lang="en">🇺🇸 English</a></li>
+<li><a class="dropdown-item lang-option" href="#" data-lang="vi">🇻🇳 Tiếng Việt</a></li>
+
+    </ul>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>            
+</html>    

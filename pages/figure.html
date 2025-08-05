@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>手辦應用 - 達鐿（越南）增材科技技術中心</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- bootstrap圖標來源 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../../styles.css">
+  
+</head>
+<body>
+
+<!-- ✅ 頂部 Header 區塊（與主頁一致） -->
+<!-- 頂部介面 -->
+ <div id="include-header"></div>
+
+
+
+<!-- ✅ Hero Banner 與主頁一致風格（含遮罩） -->
+<div class="position-relative bg-cover text-white d-flex align-items-center justify-content-center text-center" style="height: 300px; background-image: url('../../images/main.jpg'); background-size: cover; background-position: center;">
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5);"></div>
+  <div class="position-relative">
+    <h1 class="display-5 fw-bold" id="hero-title" data-key="figure-page-title">手辦應用</h1>
+    <p class="lead" id="hero-sub" data-key="figure-page-subtitle">創意設計 × 快速打樣 × 高自由度</p>
+  </div>
+</div>
+<hr />
+<!-- Main Content -->
+<!-- Main Content -->
+<!-- Main Content -->
+<main class="container my-5 application-section">
+  <div class="row align-items-center gy-5 gx-md-5">
+
+    <!-- 左側：單張圖片輪播 -->
+    <div class="col-lg-6 order-md-1">
+      <div id="figureCarousel" class="carousel slide shadow-lg rounded" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- 第1張 -->
+          <div class="carousel-item active text-center">
+            <img src="../../images/dragon2.PNG" class="img-fluid rounded" alt="應用示例1" />
+          </div>
+
+          <!-- 第2張 -->
+          <div class="carousel-item text-center">
+            <img src="../../images/buildings.PNG" class="img-fluid rounded" alt="應用示例2" />
+          </div>
+
+          <!-- 第3張 -->
+          <div class="carousel-item text-center">
+            <img src="../../images/buddha.jpg" class="img-fluid rounded" alt="應用示例3" />
+          </div>
+
+          <!-- 第4張 -->
+          <div class="carousel-item text-center">
+            <img src="../../images/bear.png" class="img-fluid rounded" alt="應用示例4" />
+          </div>
+
+        </div>
+
+        <!-- 輪播控制按鈕 -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#figureCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#figureCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 右側：說明 -->
+    <div class="col-lg-6 order-md-2">
+      <section>
+        <h2 class="mb-4 border-start border-4 ps-3" data-key="overview-title">應用概述</h2>
+        <div class="bg-light p-4 rounded shadow-sm">
+          <ul class="fs-5">
+            <li data-key="figure.service.point1.title">快速實務呈現</li>
+            <ul>
+              <li data-key="figure.service.point1.item1">即時調整：<br />方便設計師快速檢視模型的樣式、顏色、結構，並進行針對性優化</li>
+              <li data-key="figure.service.point1.item2">高速製作：<br />3D打印技術可將設計圖紙迅速轉化為實物•速度比傳統製造快5-10倍</li>
+            
+            </ul>
+            <li data-key="figure.service.point2.title">個性化設計</li>
+            <ul>
+              <li data-key="figure.service.point2.item1">產品打樣與驗證</li>
+              <li data-key="figure.service.point2.item2">功能測試模型製作</li>
+              
+            </ul>
+          </ul>
+          <p class="mt-4 text-muted" data-key="figure-overview-summary">3D打印技術讓手辦設計更高效、靈活、個性化，助力創作者突破想像極限！</p>
+        </div>
+      </section>
+    </div>
+
+  </div>
+</main>
+
+
+
+
+  <footer class="bg-light py-4 mt-5 text-center">
+    <small data-key="footer">© 2025 達鐿（越南）領航增材科技中心</small>
+  </footer>
+  <!-- 浮動聯絡框 -->
+  <div id="include-contact"></div>
+
+
+  <script src="../../js/lan.js" defer></script>
+
+<script>
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>
