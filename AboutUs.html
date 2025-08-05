@@ -14,11 +14,7 @@
     #site-title-link {
       font-size: 1.5rem;
     }
-    @media (min-width: 768px) {
-      #site-title-link {
-        font-size: 1.75rem;
-      }
-    }
+    
     .section-title {
       font-weight: bold;
       border-bottom: 3px solid #6c757d;
@@ -28,7 +24,25 @@
     .content-section {
       padding: 40px 0;
     }
-   
+   .responsive-text {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 768px) {
+  .responsive-text {
+    font-size: 1.05rem;
+    line-height: 1.85;
+  }
+  #site-title-link {
+        font-size: 1.75rem;
+      }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+}
   </style>
 </head>
 <body>
@@ -48,24 +62,42 @@
 </div>
 
 <hr />
-<!-- ✅ 公司介紹內容 -->
+<!-- 公司介紹內容 -->
 <section class="container content-section">
   <h2 class="section-title" data-key="introTitle">公司簡介</h2>
-  <p id="intro-content1" data-key="introContent1">中國總公司成立於2018年，2024年於越南成立技術中心，位於平陽省宜安神浪2工業區，擁有500台3D打印設備，專注於設計、製造、後處理的一站式增材製造服務，提供高效、精準、具競爭力的解決方案。</p>
-  <ul>
-    <li id="intro-list1" data-key="introList1">設備技術<br />
-越南基地擁有40+台3D 打印設備，涵蓋 SLA 光固化、SLM 金屬打印、CNC、3D掃描、真空復模等技術，並配備噴塗、後處理工藝，可靈活應對試產與量產需求。</li>
-    <li id="intro-list2" data-key="introList2">應用領域<br />
-廣泛應用於 鞋業、汽車、醫療、電子、家電、建築、藝術設計等行業，提供高效製造支持。</li>
-    <li id="intro-list3" data-key="introList3"> 願景使命<br />
-以技術創新、品質至上 為核心，推動 3D 打印發展，助力全球製造業升級，創造更大價值！</li>
+  <p id="intro-content1" class="responsive-text" data-key="introContent1">
+    中國總公司成立於2018年，2024年於越南成立技術中心，位於平陽省宜安神浪2工業區，擁有500台3D打印設備，專注於設計、製造、後處理的一站式增材製造服務，提供高效、精準、具競爭力的解決方案。
+  </p>
 
-  </ul>
+  <div class="row gy-4">
+    <div class="col-12">
+      <div class="p-3 rounded shadow-sm border">
+        <h5 data-key="introList1">設備技術</h5>
+        <p>越南基地擁有40+台3D 打印設備，涵蓋 SLA 光固化、SLM 金屬打印、CNC、3D掃描、真空復模等技術，並配備噴塗、後處理工藝，可靈活應對試產與量產需求。</p>
+      </div>
+    </div>
 
- <h2 class="section-title mt-5" data-key="missionTitle">企業背景介紹</h2>
-  <p id="mission-content" data-key="missionContent">達鏡（越南）領航增材科技技術中心攜手中國領先研發企業——金石集團，共同推動3D 打印技術產業化應用，全方位拓展戰略市場。我們以「一體化服務」為核心理念，提供 從前期設計、中期製造到後期處理 的完整解決方案，率先實現3D 打印技術的規模化生產，滿足 小批量試產至大規模量產 的多元需求，並積極拓展全球市場。
-目前，我們的技術與服務網絡遍佈 中國多個城市，包括東莞、武漢、鳳崗、中山、深圳、佛山、惠州、上海，為各地客戶提供 高效、精準、具競爭力的增材製造解決方案。
-</p>
+    <div class="col-12">
+      <div class="p-3 rounded shadow-sm border">
+        <h5 data-key="introList2">應用領域</h5>
+        <p>廣泛應用於 鞋業、汽車、醫療、電子、家電、建築、藝術設計等行業，提供高效製造支持。</p>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <div class="p-3 rounded shadow-sm border">
+        <h5 data-key="introList3">願景使命</h5>
+        <p>以技術創新、品質至上 為核心，推動 3D 打印發展，助力全球製造業升級，創造更大價值！</p>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title mt-5" data-key="missionTitle">企業背景介紹</h2>
+  <p id="mission-content" class="responsive-text" data-key="missionContent">
+    達鏡（越南）領航增材科技技術中心攜手中國領先研發企業——金石集團，共同推動3D 打印技術產業化應用，全方位拓展戰略市場。我們以「一體化服務」為核心理念，提供從前期設計、中期製造到後期處理的完整解決方案，率先實現3D 打印技術的規模化生產，滿足小批量試產至大規模量產的多元需求，並積極拓展全球市場。
+    <br><br>
+    目前，我們的技術與服務網絡遍佈中國多個城市，包括東莞、武漢、鳳崗、中山、深圳、佛山、惠州、上海，為各地客戶提供高效、精準、具競爭力的增材製造解決方案。
+  </p>
 </section>
 
 <!-- ✅ Footer -->
@@ -96,3 +128,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
