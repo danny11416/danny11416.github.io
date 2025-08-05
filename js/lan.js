@@ -7,6 +7,7 @@ const texts = {
     language: "語言切換",
     menu: "選單",
     introTitle: "公司簡介",
+    "heroSub": "以技術創新為核心 × 推動製造業升級",
     introContent1: "中國總公司成立於2018年，2024年於越南成立技術中心，位於平陽省宜安神浪2工業區，擁有500台3D打印設備，專注於設計、製造、後處理的一站式增材製造服務，提供高效、精準、具競爭力的解決方案。",
     introList1: "設備技術<br />越南基地擁有40+台3D 打印設備，涵蓋 SLA 光固化、SLM 金屬打印、CNC、3D掃描、真空復模等技術，並配備噴塗、後處理工藝，可靈活應對試產與量產需求。",
     introList2: "應用領域<br />廣泛應用於 鞋業、汽車、醫療、電子、家電、建築、藝術設計等行業，提供高效製造支持。",
@@ -311,7 +312,7 @@ const texts = {
     "figure.service.point2.title": "Thiết kế cá nhân hóa",
     "figure.service.point2.item1": "Linh hoạt theo nhu cầu thị trường: In 3D hỗ trợ sản xuất số lượng ít, phù hợp với sản phẩm thay đổi thiết kế thường xuyên.",
     "figure.service.point2.item2": "Tự do sáng tạo cao: Đáp ứng đa dạng yêu cầu của khách hàng, từ cấu trúc phức tạp đến phong cách độc đáo đều có thể tạo hình nhanh chóng.",
-    "figure-overview-summary":" Công nghệ in 3D giúp thiết kế mô hình figure hiệu quả hơn, linh hoạt hơn và mang tính cá nhân hóa cao, hỗ trợ các nhà sáng tạo vượt qua giới hạn của trí tưởng tượng",
+    "figure-overview-summary":" Công nghệ in 3D giúp thiết kế mô hình hiệu quả hơn, linh hoạt hơn và mang tính cá nhân hóa cao, hỗ trợ các nhà sáng tạo vượt qua giới hạn của trí tưởng tượng",
     //家電應用
     "appliance-page-title": "Ứng dụng Gia dụng",
     "appliance-hero-sub": "Tăng hiệu suất × Thiết kế linh hoạt × Sản xuất nhanh chóng",
@@ -409,12 +410,12 @@ const texts = {
 }
 
 }
-// 語言應用函式
+// 語言套用函式
 function applyLang(lang) {
   const langText = texts[lang];
   if (!langText) return;
 
-  // 取代所有 data-key 的文字
+  // 替換所有 data-key 對應的內容
   document.querySelectorAll('[data-key]').forEach(el => {
     const key = el.getAttribute('data-key');
     if (langText[key]) {
@@ -422,79 +423,66 @@ function applyLang(lang) {
     }
   });
 
-  // 針對特殊 ID 進行處理
+  // 特殊 ID 映射
   const idMap = {
     'hero-title': 'page-title',
     'hero-sub': 'page-subtitle',
     'site-title': 'siteTitle'
   };
 
-  Object.entries(idMap).forEach(([id, key]) => {
+  for (const [id, key] of Object.entries(idMap)) {
     const el = document.getElementById(id);
     if (el && langText[key]) {
-      el.innerHTML= langText[key];
+      el.innerHTML = langText[key];
     }
-  });
+  }
 
   // 更新頁面標題
   if (langText['page-title'] && langText['siteTitle']) {
     document.title = `${langText['page-title']} - ${langText['siteTitle']}`;
   }
 
-  // 更新語言按鈕顯示
+  // 語言按鈕（桌機 / 手機）
   const btnDesktop = document.getElementById("lang-btn-desktop");
   const btnMobile = document.getElementById("lang-btn-mobile");
   if (btnDesktop && langText.language) btnDesktop.innerHTML = langText.language;
   if (btnMobile && langText.language) btnMobile.innerHTML = langText.language;
 }
 
-// DOM 載入後執行
-document.addEventListener('DOMContentLoaded', () => {
-  // 載入 Header
-  fetch("../../components/header.html")
+// 載入 HTML 並插入 DOM
+function loadComponent(selector, url, callback = () => {}) {
+  fetch(url)
     .then(res => res.text())
-    .then(data => {
-      document.getElementById("include-header").innerHTML = data;
- 
-      // 綁定語言切換事件
-      document.querySelectorAll('.lang-option').forEach(btn => {
-        btn.addEventListener('click', e => {
-          e.preventDefault();
-          const lang = btn.dataset.lang;
-          localStorage.setItem('lang', lang);
-          applyLang(lang);
-        });
-      });
+    .then(html => {
+      const container = document.getElementById(selector);
+      if (container) {
+        container.innerHTML = html;
+        callback(); // 執行載入後回調
+      }
+    })
+    .catch(err => console.error(`載入 ${url} 失敗：`, err));
+}
 
-      // 套用儲存的語言（或預設 zh）
-      const currentLang = localStorage.getItem('lang') || 'zh';
-      applyLang(currentLang);
-    });
-});
-
-
-
-
-//浮動聯框
-document.addEventListener('DOMContentLoaded', () => {
-  // 語言切換（保留原有的）
-  const lang = localStorage.getItem('lang') || 'zh';
-  applyLang(lang);
-
-  // 語言切換事件（保留原有的）
+// 綁定語言切換按鈕
+function bindLangSwitch() {
   document.querySelectorAll('.lang-option').forEach(option => {
-    option.addEventListener('click', (e) => {
+    option.addEventListener('click', e => {
       e.preventDefault();
       const lang = option.dataset.lang;
       localStorage.setItem('lang', lang);
       applyLang(lang);
     });
   });
+}
 
-  // ✅ 載入浮動聯絡元件
-  fetch("../../components/floating-contact.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("include-contact").innerHTML = html;
-    });
+// 頁面載入
+document.addEventListener('DOMContentLoaded', () => {
+  const currentLang = localStorage.getItem('lang') || 'zh';
+  applyLang(currentLang);
+
+  // 載入 Header 並綁定語言切換
+  loadComponent("include-header", "../../components/header.html", bindLangSwitch);
+
+  // 載入浮動聯絡元件
+  loadComponent("include-contact", "../../components/floating-contact.html");
 });
