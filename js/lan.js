@@ -4,7 +4,7 @@ const texts = {
     siteTitle: "達鐿（越南）領航增材科技技術中心",
     about: "關於我們",
     contact: "聯絡方式",
-    language: "語言切換",
+    language: "🌐 中文",
     menu: "選單",
     introTitle: "公司簡介",
     "heroSub": "以技術創新為核心 × 推動製造業升級",
@@ -140,7 +140,7 @@ const texts = {
     siteTitle: "TAYI (VIETNAM) 3D PRINTING TECHNICAL CENTER",
     about: "About Us",
     contact: "Contact",
-    language: "Language",
+    language: "🌐 English",
     menu: "Menu",
     "heroSub": "Driven by Innovation × Upgrading Manufacturing",
     introTitle: "Company Introduction",
@@ -280,7 +280,7 @@ const texts = {
     siteTitle: "TAYI (VIETNAM) 3D PRINTING TECHNICAL CENTER",
     about: "Về Chúng Tôi",
     contact: "Liên Hệ",
-    language: "Ngôn ngữ",
+    language: "🌐 Tiếng Việt",
     menu: "Menu",
     introTitle: "About Us",
     "heroSub": "Lấy đổi mới công nghệ làm cốt lõi × Thúc đẩy nâng cấp ngành sản xuất",
@@ -486,4 +486,5 @@ document.addEventListener('DOMContentLoaded', () => {
   // 載入浮動聯絡元件
   loadComponent("include-contact", "../../components/floating-contact.html");
 });
+
 
