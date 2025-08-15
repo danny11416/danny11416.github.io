@@ -449,7 +449,6 @@ function applyLang(lang) {
   if (btnMobile && langText.language) btnMobile.innerHTML = langText.language;
 }
 
-// 載入 HTML 並插入 DOM
 function loadComponent(selector, url, callback = () => {}) {
   fetch(url)
     .then(res => res.text())
@@ -457,7 +456,12 @@ function loadComponent(selector, url, callback = () => {}) {
       const container = document.getElementById(selector);
       if (container) {
         container.innerHTML = html;
-        callback(); // 執行載入後回調
+
+        // 取得目前語言並套用（確保載入的 HTML 也被翻譯）
+        const lang = localStorage.getItem('lang') || 'zh';
+        applyLang(lang);
+
+        callback(); // 再綁定語言切換事件
       }
     })
     .catch(err => console.error(`載入 ${url} 失敗：`, err));
@@ -478,13 +482,11 @@ function bindLangSwitch() {
 // 頁面載入
 document.addEventListener('DOMContentLoaded', () => {
   const currentLang = localStorage.getItem('lang') || 'zh';
-  applyLang(currentLang);
 
-  // 載入 Header 並綁定語言切換
+  // 載入 Header → 套用語言 → 綁定語言切換
   loadComponent("include-header", "../../components/header.html", bindLangSwitch);
 
-  // 載入浮動聯絡元件
+  // 載入浮動聯絡元件 → 也要套用語言（如果有文字）
   loadComponent("include-contact", "../../components/floating-contact.html");
 });
-
 
