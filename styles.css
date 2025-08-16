@@ -162,6 +162,14 @@ html, body {
   border-color: #0084ff;
 }
 
+[data-key].lang-ready {
+  opacity: 1;
+}
+[data-key] {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
 
 
 
