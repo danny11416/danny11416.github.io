@@ -315,12 +315,10 @@ function applyLang(l) {
   document.addEventListener('DOMContentLoaded', () => {
     const lang = localStorage.getItem('lang') || 'zh';
     applyLang(lang);
-   document.documentElement.style.visibility = 'visible';
+   document.documentElement.classList.add('lang-ready');
     
   });
-  // 翻譯完再顯示整頁，避免閃現預設語言
-  document.documentElement.style.visibility = 'visible';
-});
+  
 
   document.querySelectorAll('.lang-option').forEach(option => {
   option.addEventListener('click', (e) => {
@@ -333,6 +331,7 @@ function applyLang(l) {
 
 </script>
 </body></html>
+
 
 
 
