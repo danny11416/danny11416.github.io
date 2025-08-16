@@ -38,7 +38,10 @@ html, body {
 
 /* ========== Hero Banner 區塊 ========== */
 .bg-cover {
-  background-image: url('images/main.webp?v=20250807'); /* 主圖 URL */
+  
+  background-image: url(<img   src="main.webp" srcset="main-545x300.webp 545w, main-679x453.webp 679w, main.webp 4032w"   sizes="(max-width: 600px) 545px, (max-width: 1200px) 679px, 4032px"  alt="back_ground_pic">); /* 主圖 URL */
+
+  
   background-size: cover;     /* 覆蓋整個容器 */
   background-position: center;/* 圖片置中 */
   background-repeat: no-repeat;
@@ -169,6 +172,7 @@ html, body {
   opacity: 0;
   transition: opacity 0.2s ease;
 }
+
 
 
 
