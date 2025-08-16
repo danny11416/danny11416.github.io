@@ -38,18 +38,30 @@ html, body {
 
 /* ========== Hero Banner 區塊 ========== */
 .bg-cover {
-  
-  background-image: url(<img   src="main.webp" srcset="main-545x300.webp 545w, main-679x453.webp 679w, main.webp 4032w"   sizes="(max-width: 600px) 545px, (max-width: 1200px) 679px, 4032px"  alt="back_ground_pic">); /* 主圖 URL */
-
-  
-  background-size: cover;     /* 覆蓋整個容器 */
-  background-position: center;/* 圖片置中 */
+  background-image: url("main.webp"); /* 預設最大尺寸 */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   height: 600px;
   position: relative;
   color: #f8f9fa;
-  min-width:300px;
+  min-width: 300px;
 }
+
+/* 小螢幕 (<=600px) */
+@media (max-width: 600px) {
+  .bg-cover {
+    background-image: url("main-545x300.webp");
+  }
+}
+
+/* 中螢幕 (601px ~ 1200px) */
+@media (max-width: 1200px) and (min-width: 601px) {
+  .bg-cover {
+    background-image: url("main-679x453.webp");
+  }
+}
+ //針對不同螢幕大小做適配
 
 .overlay-content {
   background-color: rgba(0, 0, 0, 0.4);
@@ -172,6 +184,7 @@ html, body {
   opacity: 0;
   transition: opacity 0.2s ease;
 }
+
 
 
 
