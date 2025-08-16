@@ -299,6 +299,7 @@ function applyLang(l) {
     const key = btn.dataset.key;
     btn.innerText = texts[l][key];
     document.documentElement.classList.add('lang-ready');
+    btn.classList.add('lang-ready');
   });
 
   document.getElementById('lang-btn-desktop').innerText = texts[l].language;
@@ -332,6 +333,7 @@ function applyLang(l) {
 
 </script>
 </body></html>
+
 
 
 
