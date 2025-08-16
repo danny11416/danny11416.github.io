@@ -447,8 +447,15 @@ function applyLang(lang) {
   // 語言按鈕（桌機 / 手機）
   const btnDesktop = document.getElementById("lang-btn-desktop");
   const btnMobile = document.getElementById("lang-btn-mobile");
-  if (btnDesktop && langText.language) btnDesktop.innerHTML = langText.language; btnDesktop.classList.add("lang-ready");
-  if (btnMobile && langText.language) btnMobile.innerHTML = langText.language; btnMobile.classList.add("lang-ready");
+  if (btnDesktop && langText.language) {
+  btnDesktop.innerHTML = langText.language;
+  btnDesktop.classList.add("lang-ready");
+}
+if (btnMobile && langText.language) {
+  btnMobile.innerHTML = langText.language;
+  btnMobile.classList.add("lang-ready");
+}
+
 }
 
 function loadComponent(selector, url, callback = () => {}) {
@@ -491,5 +498,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // 載入浮動聯絡元件 → 也要套用語言（如果有文字）
   loadComponent("include-contact", "../../components/floating-contact.html");
 });
+
 
 
